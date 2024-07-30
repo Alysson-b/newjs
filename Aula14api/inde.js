@@ -10,9 +10,9 @@ const maxTentativas = 3;
 
 
 function adivinhar(){
-    const tentaiva = parseInt(palpite.velue, 10)
+    const tentativa = parseInt(palpite.velue, 10)
 
-    if(isNaN(tentaiva) || tentaiva < 1 tentaiva > 10){
+    if(isNaN(tentativa) || tentativa < 1 tentativa > 10){
 
         resultDiv.textContent = "insira um numero valido";
         return;
@@ -20,7 +20,7 @@ function adivinhar(){
 
     tentaivas++;
 
-    if(tentaiva === numero){
+    if(tentativa === numero){
          resultDiv.textContent = "parabéns vc aceretou"
     }
     else if(tentaivas >= maxTentativas){
@@ -28,13 +28,13 @@ function adivinhar(){
         resetgame()
     }
     else{
-        resultDiv.textContent = `errado! voçe tem ${maxTentativas - tentaivas}.`
+        resultDiv.textContent = `errado! voçe tem ${maxTentativas - tentativas}.`
     }
 
 
 }
 
-tfunction resetGame() {
+function resetGame() {
     numero = Math.floor(Math.random() * 10) + 1;
     tentativas = 0;
 }
